@@ -14,6 +14,5 @@ namespace AddressBook.Data
         void Delete(T item);
         T GetById(int id);
         IEnumerable<T> GetAll();
-        IEnumerable<T> Find(Expression<Func<T, bool>> predicate);
     }
 }

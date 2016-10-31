@@ -7,8 +7,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using AddressBook.Data;
+using AddressBook.Data.Repositories.SQL;
+using AddressBook.Data.Entities;
+using System.IO;
 
-namespace AddressBook_API
+namespace AddressBook.Api
 {
     public class Startup
     {
@@ -29,7 +33,7 @@ namespace AddressBook_API
             Configuration = builder.Build();
         }
 
-        public IConfigurationRoot Configuration { get; }
+        public static IConfigurationRoot Configuration { get; private set; }
 
         // This method gets called by the runtime. Use this method to add services to the container
         public void ConfigureServices(IServiceCollection services)
@@ -38,6 +42,7 @@ namespace AddressBook_API
             services.AddApplicationInsightsTelemetry(Configuration);
             services.AddCors();
             services.AddMvc();
+            services.AddSingleton<AddressBook.Data.IRepository<Contact>>(repo => new ContactRepository(Configuration.GetConnectionString("AddressBook")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
@@ -51,6 +56,12 @@ namespace AddressBook_API
             app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseMvc();
+
+            var builder = new ConfigurationBuilder()
+                            .SetBasePath(Directory.GetCurrentDirectory())
+                            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+            Configuration = builder.Build();
+
         }
     }
 }

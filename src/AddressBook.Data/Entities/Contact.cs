@@ -14,17 +14,17 @@ namespace AddressBook.Data.Entities
         public string Title { get; set; }
         public string FullName { get; set; }
         public string Company { get; set; }
-        private string _tags { get; set; }
+        private string Tags { get; set; }
 
-        public List<string> Tags
+        public List<string> TagList
         {
             get
             { 
-                return _tags.Split(';').ToList();
+                return Tags.Split(';').ToList();
             }
             set
             {
-                _tags = String.Join(";", value);
+                Tags = String.Join(";", value);
             }
         }
     }

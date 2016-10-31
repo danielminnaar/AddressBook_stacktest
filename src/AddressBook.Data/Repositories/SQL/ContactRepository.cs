@@ -12,53 +12,47 @@ namespace AddressBook.Data.Repositories.SQL
 {
     public class ContactRepository : IRepository<AddressBook.Data.Entities.Contact>
     {
-        private readonly string _tableName;
         private string _connectionString;
 
-        internal IDbConnection Connection
+        public IDbConnection GetConnection() // factory-ize this
         {
-            get
-            {
-                return new SqlConnection(_connectionString);
-            }
+            var conn = new SqlConnection(_connectionString);
+            conn.Open();
+            return conn;
         }
 
-        public ContactRepository(string connectionString, string tableName)
+        public ContactRepository(string connectionString)
         {
             _connectionString = connectionString;
-            _tableName = tableName;
         }
 
         public void Insert(Contact item)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Insert()");
         }
 
         public void Update(Contact item)
         {
-            using (var cn = Connection)
-                cn.Execute(String.Format("UPDATE {0} SET [FullName] = @FullName, [Company] = @Company, [Title] = @Title, [SkypeUserName] = @SkypeUserName, [LinkedInUrl] = @LinkedInUrl, [EmailAddress] = @EmailAddress, [PhoneNumber] = @PhoneNumber WHERE Id = {1}", _tableName, item.Id.ToString()), item);
+            using (var cn = GetConnection())
+                cn.Execute(String.Format("UPDATE Contacts SET [FullName] = @FullName, [Company] = @Company, [Title] = @Title, [SkypeUserName] = @SkypeUserName, [LinkedInUrl] = @LinkedInUrl, [EmailAddress] = @EmailAddress, [PhoneNumber] = @PhoneNumber WHERE Id = {0}", item.Id.ToString()), item);
         }
 
         public void Delete(Contact item)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Delete()");
         }
 
         public Contact GetById(int id)
         {
-            using (var db = Connection)
-                return db.Query<Contact>(String.Format("SELECT * FROM {0} WHERE Id = {1}", _tableName, id.ToString())).SingleOrDefault();
+            using (var db = GetConnection())
+                return db.Query<Contact>(String.Format("SELECT * FROM Contacts WHERE Id = {0}", id.ToString())).SingleOrDefault();
         }
 
         public IEnumerable<Contact> GetAll()
         {
-            throw new NotImplementedException();
+            using (var db = GetConnection())
+                return db.Query<Contact>(String.Format("SELECT * FROM Contacts"));
         }
 
-        public IEnumerable<Contact> Find(Expression<Func<Contact, bool>> predicate)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
