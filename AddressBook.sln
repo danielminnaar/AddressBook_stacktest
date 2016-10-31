@@ -10,11 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AddressBook.API", "src\AddressBook.API\AddressBook.API.xproj", "{3C1C11A2-B45E-4E9A-95A1-6DE3EAEB21B5}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AddressBook.Api", "src\AddressBook.API\AddressBook.Api.xproj", "{3C1C11A2-B45E-4E9A-95A1-6DE3EAEB21B5}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AddressBook.Data", "src\AddressBook.Data\AddressBook.Data.xproj", "{EB2CE5FF-92B6-490D-8C78-9F8AFDD97C9A}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{1B9E102E-63A7-4F7C-8C6D-0905A2488404}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
