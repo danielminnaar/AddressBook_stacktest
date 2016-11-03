@@ -2,6 +2,7 @@
     element: HTMLElement;
     span: HTMLElement;
     timerToken: number;
+    dude: string;
 
     constructor(element: HTMLElement) {
         this.element = element;
