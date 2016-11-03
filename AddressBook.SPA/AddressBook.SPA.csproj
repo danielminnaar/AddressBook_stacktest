@@ -8207,9 +8207,6 @@
     <Content Include="node_modules\zone.js\lib\utils.js" />
     <Content Include="node_modules\zone.js\lib\zone.js" />
     <Content Include="node_modules\zone.js\lib\zones\long-stack-trace.js" />
-    <Content Include="obj\Debug\AddressBook.SPA.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\AddressBook.SPA.dll" />
-    <Content Include="obj\Debug\AddressBook.SPA.pdb" />
     <Content Include="src\css\app.css" />
     <Content Include="web.config" />
   </ItemGroup>
@@ -14446,8 +14443,6 @@
     <Content Include="node_modules\zone.js\LICENSE" />
     <Content Include="node_modules\zone.js\package.json" />
     <Content Include="node_modules\zone.js\README.md" />
-    <Content Include="obj\Debug\AddressBook.SPA.csprojResolveAssemblyReference.cache" />
-    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include=".editorconfig" />
     <Content Include=".gitignore" />
     <Content Include="package.json" />
@@ -14459,15 +14454,7 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="obj\Release\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
   </PropertyGroup>
