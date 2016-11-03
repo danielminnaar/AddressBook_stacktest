@@ -23,7 +23,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.css" />
-    <Content Include="app.js" />
     <Content Include="app\about\about.component.js" />
     <Content Include="app\app.component.js" />
     <Content Include="app\boot.js" />
@@ -40,19 +39,9 @@
     <Content Include="bin\AddressBook.SPA.dll" />
     <Content Include="bin\AddressBook.SPA.pdb" />
     <Content Include="dev\about\about.component.html" />
-    <Content Include="dev\about\about.component.js" />
     <Content Include="dev\app.component.html" />
-    <Content Include="dev\app.component.js" />
-    <Content Include="dev\boot.js" />
     <Content Include="dev\contacts\contact-list.component.html" />
-    <Content Include="dev\contacts\contact-list.component.js" />
     <Content Include="dev\contacts\contact.component.html" />
-    <Content Include="dev\contacts\contact.component.js" />
-    <Content Include="dev\contacts\contact.js" />
-    <Content Include="dev\contacts\contact.service.js" />
-    <Content Include="dev\contacts\data.js" />
-    <Content Include="dev\http\http-test.component.js" />
-    <Content Include="dev\http\http-test.service.js" />
     <Content Include="gulpfile.js" />
     <Content Include="images\common.PNG" />
     <Content Include="images\compiler.PNG" />
@@ -8225,7 +8214,6 @@
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="dev\about\about.component.ts" />
     <TypeScriptCompile Include="dev\app.component.ts" />
     <TypeScriptCompile Include="dev\boot.ts" />
@@ -8234,8 +8222,7 @@
     <TypeScriptCompile Include="dev\contacts\contact.service.ts" />
     <TypeScriptCompile Include="dev\contacts\contact.ts" />
     <TypeScriptCompile Include="dev\contacts\data.ts" />
-    <TypeScriptCompile Include="dev\http\http-test.component.ts" />
-    <TypeScriptCompile Include="dev\http\http-test.service.ts" />
+    <TypeScriptCompile Include="dev\http\http-contacts.service.ts" />
     <TypeScriptCompile Include="node_modules\angular2\animate.d.ts" />
     <TypeScriptCompile Include="node_modules\angular2\animate\testing.d.ts" />
     <TypeScriptCompile Include="node_modules\angular2\bootstrap.d.ts" />
@@ -9591,16 +9578,6 @@
   <ItemGroup>
     <Content Include="assets\scss\app.scss" />
     <Content Include="bin\AddressBook.SPA.dll.config" />
-    <Content Include="dev\about\about.component.js.map" />
-    <Content Include="dev\app.component.js.map" />
-    <Content Include="dev\boot.js.map" />
-    <Content Include="dev\contacts\contact-list.component.js.map" />
-    <Content Include="dev\contacts\contact.component.js.map" />
-    <Content Include="dev\contacts\contact.js.map" />
-    <Content Include="dev\contacts\contact.service.js.map" />
-    <Content Include="dev\contacts\data.js.map" />
-    <Content Include="dev\http\http-test.component.js.map" />
-    <Content Include="dev\http\http-test.service.js.map" />
     <Content Include="node_modules\.bin\acorn" />
     <Content Include="node_modules\.bin\acorn.cmd" />
     <Content Include="node_modules\.bin\atob" />
@@ -14473,7 +14450,6 @@
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include=".editorconfig" />
     <Content Include=".gitignore" />
-    <Content Include="app.js.map" />
     <Content Include="package.json" />
     <Content Include="tsconfig.json" />
     <None Include="web.Debug.config">
